@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38CA95CE-4116-40BF-B91B-4CF5E58A8767}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FFRobotMaster</RootNamespace>
+    <AssemblyName>FFRobotMaster</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluoriteEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\FluoriteEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\SlimDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="YamlDotNet, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\YamlDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="3Ds\Fluorite3D.cs" />
+    <Compile Include="3Ds\XFile.cs" />
+    <Compile Include="Action\Action.cs" />
+    <Compile Include="Action\ActionsFile.cs" />
+    <Compile Include="Action\Frame.cs" />
+    <Compile Include="Action\ResolveAction.cs" />
+    <Compile Include="Capture\Model.cs" />
+    <Compile Include="Robot\Bone.cs" />
+    <Compile Include="Robot\Robot.cs" />
+    <Compile Include="Steering\Robot_ProtocolV1_0.cs" />
+    <Compile Include="Steering\Robot_ProtocolV2_0.cs" />
+    <Compile Include="Tts\Tts.cs" />
+    <Compile Include="Uc\ImageButtonUC.xaml.cs">
+      <DependentUpon>ImageButtonUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\JointButtonUC.xaml.cs">
+      <DependentUpon>JointButtonUC.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Uc\ImageButtonUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Uc\JointButtonUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Bin\Actions\default.af" />
+    <None Include="images\default.af" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ActionDownPic.png" />
+    <Resource Include="images\ActionUpPic.png" />
+    <Resource Include="images\BestViewPic.png" />
+    <Resource Include="images\ChestPic.png" />
+    <Resource Include="images\ComPic.png" />
+    <Resource Include="images\CopyFramePic.png" />
+    <Resource Include="images\DeleteActionPic.png" />
+    <Resource Include="images\DelFramePic.png" />
+    <Resource Include="images\DoubleStepPic.png" />
+    <Resource Include="images\DownloadPic.png" />
+    <Resource Include="images\EditPic.png" />
+    <Resource Include="images\ExportText.png" />
+    <Resource Include="images\frame1.png" />
+    <Resource Include="images\FrameLeftPic.png" />
+    <Resource Include="images\FrameRightPic.png" />
+    <Resource Include="images\l.png" />
+    <Resource Include="images\LeftStepPic.png" />
+    <Resource Include="images\MirrorLeftPic.png" />
+    <Resource Include="images\MirrorPic.png" />
+    <Resource Include="images\MirrorRightPic.png" />
+    <Resource Include="images\MusicPic.png" />
+    <Resource Include="images\NewPic.png" />
+    <Resource Include="images\OpenPic.png" />
+    <Resource Include="images\p.png" />
+    <Resource Include="images\PastePic.png" />
+    <Resource Include="images\PausePic.png" />
+    <Resource Include="images\PingPic.png" />
+    <Resource Include="images\PlayBonePic.png" />
+    <Resource Include="images\PlayBusRobot.png" />
+    <Resource Include="images\PlayPic.png" />
+    <Resource Include="images\PlayRobot.png" />
+    <Resource Include="images\RealTimePic.png" />
+    <Resource Include="images\RedoPic.png" />
+    <Resource Include="images\RefreshPic.png" />
+    <Resource Include="images\RightStepPic.png" />
+    <Resource Include="images\robot.png" />
+    <Resource Include="images\RotateViewPic.png" />
+    <Resource Include="images\SavePic.png" />
+    <Resource Include="images\SaveRobot.png" />
+    <Resource Include="images\ScaleViewPic.png" />
+    <Resource Include="images\Search.png" />
+    <Resource Include="images\SelectPic.png" />
+    <Resource Include="images\StopPic.png" />
+    <Resource Include="images\TransViewPic.png" />
+    <Resource Include="images\UndoPic.png" />
+    <Resource Include="images\UploadPic.png" />
+    <Resource Include="images\ZeroFramePic.png" />
+    <Resource Include="images\ZeroPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\DefaultFrame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\help.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

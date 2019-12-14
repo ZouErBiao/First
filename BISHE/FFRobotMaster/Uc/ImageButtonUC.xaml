@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="FFRobotMaster.Uc.ImageButtonUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FFRobotMaster.Uc"
+             mc:Ignorable="d" 
+             d:DesignHeight="34" d:DesignWidth="34"
+             IsEnabledChanged="UserControl_IsEnabledChanged" 
+             MouseEnter="UserControl_MouseEnter" 
+             MouseLeave="UserControl_MouseLeave" 
+             MouseDown="UserControl_MouseDown" 
+             MouseUp="UserControl_MouseUp">
+    <Border x:Name="m_Border" BorderThickness="1" CornerRadius="2" Background="White">
+        <Rectangle Margin="2">
+            <Rectangle.Fill>
+                <ImageBrush x:Name="m_ImageBrush"/>
+                <!--//m_ImageBrush-->
+            </Rectangle.Fill>
+        </Rectangle>
+    </Border>
+</UserControl>
