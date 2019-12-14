@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="FFRobotMaster.Uc.JointButtonUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FFRobotMaster.Uc"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="40"
+             MouseEnter="UserControl_MouseEnter" 
+             MouseLeave="UserControl_MouseLeave" 
+             MouseDown="UserControl_MouseDown" 
+             MouseUp="UserControl_MouseUp"
+             MouseDoubleClick="UserControl_MouseDoubleClick">
+
+    <Grid>
+        <Border BorderBrush="Transparent" BorderThickness="2" Name="joint" Background="Aqua" Margin="1,1,1,1"/>
+        <Button Background="Transparent"  Margin="2,2,2,2">
+        <StackPanel>        
+            <TextBlock Name="jointID" FontSize="10" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBlock Name="jointAngle" FontSize="10" HorizontalAlignment="Center"/>
+        </StackPanel>
+        </Button>
+    </Grid>
+</UserControl>

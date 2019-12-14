@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFRobotMaster", "FFRobotMaster\FFRobotMaster.csproj", "{38CA95CE-4116-40BF-B91B-4CF5E58A8767}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38CA95CE-4116-40BF-B91B-4CF5E58A8767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38CA95CE-4116-40BF-B91B-4CF5E58A8767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38CA95CE-4116-40BF-B91B-4CF5E58A8767}.Debug|x86.ActiveCfg = Debug|x86
+		{38CA95CE-4116-40BF-B91B-4CF5E58A8767}.Debug|x86.Build.0 = Debug|x86
+		{38CA95CE-4116-40BF-B91B-4CF5E58A8767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38CA95CE-4116-40BF-B91B-4CF5E58A8767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38CA95CE-4116-40BF-B91B-4CF5E58A8767}.Release|x86.ActiveCfg = Release|x86
+		{38CA95CE-4116-40BF-B91B-4CF5E58A8767}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E9FC420-B7DA-4411-99E6-5DFBC63AC7A7}
+	EndGlobalSection
+EndGlobal
